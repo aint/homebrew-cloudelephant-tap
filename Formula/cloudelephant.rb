@@ -8,7 +8,7 @@ class Cloudelephant < Formula
   depends_on "go" => :build
 
   def install
-    system "go", "build", "-o", bin/"ce", "-ldflags", "-X github.com/aint/CloudElephant/cmd.gitTag=#{version}"
+    system "go", "build", "-o", bin/"ce", "-ldflags", "-X github.com/aint/CloudElephant/cmd.gitTag=#{version}", "-X github.com/aint/CloudElephant/cmd.gitBranch=master"
   end
 
   test do
